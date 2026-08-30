@@ -1,1 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              border: 'hsl(var(--border))',
+              input: 'hsl(var(--input))',
+              ring: 'hsl(var(--ring))',
+              background: 'hsl(var(--background))',
+              foreground: 'hsl(var(--foreground))',
+              muted: 'hsl(var(--muted))',
+              primary: {
+                DEFAULT: 'hsl(var(--primary))',
+                foreground: 'hsl(var(--primary-foreground))',
+              },
+              accent: {
+                DEFAULT: 'hsl(var(--accent))',
+                foreground: 'hsl(var(--accent-foreground))',
+              },
+              destructive: {
+                DEFAULT: 'hsl(var(--destructive))',
+                foreground: 'hsl(var(--destructive-foreground))',
+              },
+              page: 'hsl(var(--page))',
+              'nav-pill': 'hsl(var(--nav-pill))',
+              'nav-pill-active': 'hsl(var(--nav-pill-active))',
+              'button-secondary': 'hsl(var(--button-secondary))',
+              'button-primary-disabled': 'hsl(var(--button-primary-disabled))',
+            },
+            fontFamily: {
+              sans: ['system-ui', 'sans-serif'],
+              display: ["'Georgia'", 'Times New Roman', 'serif'],
+              body: ["'Poppins'", 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Georgia:wght@700&family=Poppins:wght@400&family=Poppins:wght@600&family=Poppins:wght@700&display=swap"
+    />
+    <style>
+      :root {
+        --background: 0 0% 91%;
+        --foreground: 0 0% 7%;
+        --primary: 259 12% 36%;
+        --primary-foreground: 0 0% 91%;
+        --accent: 0 0% 85%;
+        --accent-foreground: 0 0% 7%;
+        --muted: 256 11% 39%;
+        --page: 0 0% 91%;
+        --nav-pill: 0 0% 100%;
+        --nav-pill-active: 259 12% 36%;
+        --button-secondary: 0 0% 100%;
+        --button-primary-disabled: 0 0% 85%;
+        --border: 0 0% 7%;
+        --input: 0 0% 7%;
+        --ring: 259 12% 36%;
+        --radius: 9999px;
+        --font-display: 'Georgia', Times New Roman, serif;
+        --font-body: 'Poppins', system-ui, sans-serif;
+      }
+      body {
+        background-color: hsl(var(--background));
+        color: hsl(var(--foreground));
+      }
+    </style>
+  </head>
+  <body>
+    <div class="min-h-screen bg-gradient-to-r from-[#A1A8AE] to-white text-foreground flex flex-col">
+      <section id="header" class="w-full py-4 px-6">
+        <div class="flex items-center justify-between gap-4">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <span
+              class="inline-flex items-center px-5 py-2 rounded-full border-[5px] border-foreground bg-transparent font-body font-semibold text-base text-foreground whitespace-nowrap"
+            >
+              Google Map Extractor
+            </span>
+          </div>
 
+          <!-- Center Nav Pill -->
+          <nav class="flex-shrink-0">
+            <div class="inline-flex items-center rounded-full border-[5px] border-primary bg-nav-pill px-2 py-1 gap-1">
+              <a
+                href="#hero"
+                class="inline-flex items-center px-5 py-[6px] rounded-full bg-nav-pill-active text-nav-pill-active-foreground font-body font-semibold text-base whitespace-nowrap"
+              >
+                Home
+              </a>
+              <a
+                href="#hero"
+                class="inline-flex items-center px-5 py-[6px] rounded-full text-foreground font-body font-semibold text-base whitespace-nowrap hover:bg-accent/50 transition-colors"
+              >
+                Dashboard
+              </a>
+              <a
+                href="#hero"
+                class="inline-flex items-center px-5 py-[6px] rounded-full text-foreground font-body font-semibold text-base whitespace-nowrap hover:bg-accent/50 transition-colors"
+              >
+                Result
+              </a>
+              <a
+                href="#hero"
+                class="inline-flex items-center px-5 py-[6px] rounded-full text-foreground font-body font-semibold text-base whitespace-nowrap hover:bg-accent/50 transition-colors"
+              >
+                Billing Subcription
+              </a>
+            </div>
+          </nav>
+
+          <!-- Auth Buttons -->
+          <div class="flex items-center gap-3 flex-shrink-0">
+            <button
+              type="button"
+              class="inline-flex items-center px-6 py-2 rounded-full border-[5px] border-foreground bg-transparent font-body font-semibold text-base text-foreground whitespace-nowrap hover:bg-accent/30 transition-colors"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              class="inline-flex items-center px-6 py-2 rounded-full border-[5px] border-foreground bg-transparent font-body font-semibold text-base text-foreground whitespace-nowrap hover:bg-accent/30 transition-colors"
+            >
+              SignUp For Free
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="hero" class="flex-1 flex items-center justify-center py-24 px-4">
+        <div class="max-w-3xl mx-auto text-center flex flex-col items-center gap-[40px]">
+          <div class="flex flex-col items-center gap-[24px]">
+            <h1 class="font-body font-bold text-[29px] leading-[38px] text-foreground">
+              Extract Business Data from Google Maps in Seconds
+            </h1>
+            <p class="font-body font-normal text-[18px] leading-[30px] text-foreground max-w-[660px]">
+              Search any keyword and location — get names, addresses, phone numbers, websites, ratings, and reviews
+              exported straight to CSV or Excel. No coding required
+            </p>
+          </div>
+          <div class="flex flex-row items-center gap-[16px]">
+            <button
+              type="button"
+              class="font-body font-semibold text-[18px] leading-[30px] text-foreground bg-accent rounded-full px-[28px] py-[12px] border-[5px] border-foreground/20 hover:bg-accent/80 transition-colors"
+            >
+              Start Extracting →
+            </button>
+            <button
+              type="button"
+              class="font-body font-bold text-[18px] leading-[30px] text-nav-pill-active-foreground bg-primary rounded-full px-[28px] py-[12px] border-[5px] border-primary hover:bg-primary/90 transition-colors"
+            >
+              Watch Demo
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
